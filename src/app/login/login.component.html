@@ -1,0 +1,30 @@
+<p>login works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+  <div>
+    <label for="pseudo">
+      Pseudo
+    </label>
+    <input id="pseudo" type="text" formControlName="pseudo" />
+  </div>
+
+  <div>
+    <label for="scoringLimit">
+      Scoring limit
+    </label>
+    <input id="scoringLimit" type="number" formControlName="scoringLimit" />
+  </div>
+
+  <div>
+    <label for="team">
+      Team
+    </label>
+    <select id="team" formControlName="team">
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+    </select>
+  </div>
+
+  <button class="button" type="submit">Create new game</button>
+</form>
+
+<p>server answer : {{ serverAnswer }}</p>
